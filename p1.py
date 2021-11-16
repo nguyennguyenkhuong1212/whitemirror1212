@@ -40,6 +40,3 @@ def main():
 
 
 main()
-
-
-# Hello git
