@@ -8,10 +8,12 @@
 
 
 def total_flour(large_thick, large_thin, medium_thick, medium_thin):
+    # Calculate the flour in kg with waste flour included
     return (large_thick * 550 + large_thin * 500 + medium_thick * 450 + medium_thin * 400) * 106 / 100000
 
 
 def total_cost_A(flour):
+    # Calculate the expense when buying X kg flour at store A
     expense = flour * 30000
     if flour < 30:
         expense -= (expense * 3 / 100)
@@ -21,6 +23,7 @@ def total_cost_A(flour):
 
 
 def total_cost_B(flour):
+    # Calculate the expense when buying X kg flour at store B
     expense = flour * 31000
     if flour < 40:
         expense -= (expense * 5 / 100)
@@ -30,6 +33,7 @@ def total_cost_B(flour):
 
 
 def round_up(flour):
+    # Round up the flour if it is not divisible by 2
     if flour % 2 == 0:
         return flour
     return (flour // 2) * 2 + 2
@@ -47,8 +51,7 @@ def flour_order(large_thick, large_thin, medium_thick, medium_thin):
     flour = int(round_up(total_flour(large_thick, large_thin, medium_thick, medium_thin)))
     ex_A = int(total_cost_A(flour))
     ex_B = int(total_cost_B(flour))
-    print(
-        f'We need to order {flour}kg of flour, which costs {ex_A}VND if we buy from A and {ex_B}VND if we buy from B.')
+    print(f'We need to order {flour}kg of flour, which costs {ex_A}VND if we buy from A and {ex_B}VND if we buy from B.')
     if ex_A <= ex_B:
         return flour, "A", ex_A
     return flour, "B", ex_B

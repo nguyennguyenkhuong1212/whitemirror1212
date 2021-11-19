@@ -29,7 +29,7 @@ def move(x, y):
 
 
 def draw_x_y_axis(length):
-    # set up
+    # set up the Turtle
     tur.color("Black")
 
     # draw x axis
@@ -47,8 +47,13 @@ def draw_x_y_axis(length):
 
 
 def print_record_date(record_date):
+    # move the turtle down a little bit
     move(X + 65, Y - 20)
+
+    # print out the record date
     tur.write(record_date)
+
+    # reset position
     move(X + 60, Y)
 
 
@@ -82,6 +87,7 @@ def draw_bar(length, color_string):
 
 
 def write_total_num(a_num):
+    # write the total number of pizzas on top of the bar chart
     tur.color("Black")
     tur.write(a_num)
 
@@ -105,6 +111,6 @@ def draw_bar_chart(record_date, large_thick, large_thin, medium_thick, medium_th
     # write the total number of pizzas
     write_total_num(total_num)
 
-
-draw_bar_chart("16/11/2021", 20, 10, 15, 10)
-win.exitonclick()
+def main():
+    draw_bar_chart("16/11/2021", 20, 10, 15, 10)
+    win.exitonclick()

@@ -12,6 +12,11 @@ import random
 
 
 def is_inside_circle(x, y):
+    """
+    :param x: x coordinate of a point
+    :param y: y coordinate of a point
+    :return: check if the point (x, y) is in the circle
+    """
     a_num = math.sqrt(x * x + y * y)
     if a_num > 1:
         return False
@@ -39,6 +44,10 @@ def estimate_pi(N):
     :param N: size of list
     :return: estimated pi
     """
+    # We need to generate N random points first and then we will count the points which are inside the circle
+    # Then compute the estimated pi by using the given formula:
+    # estimated_pi = 4 * point inside the circle / total points
+    # return estimated pi
     inside = generate_N_random_points(N)
     estimated_pi = 4 * inside / N
     return estimated_pi
