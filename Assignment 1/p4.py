@@ -4,7 +4,7 @@
 # Assignment: 1
 # Author: Nguyen Nguyen Khuong (s3924577)
 # Created date: 16/11/2021
-# Last modified date: 16/11/2021
+# Last modified date: 20/11/2021
 
 
 import turtle
@@ -97,16 +97,17 @@ def draw_bar_chart(record_date, large_thick, large_thin, medium_thick, medium_th
     total_num = get_total_num_of_pizzas(large_thick, large_thin, medium_thick, medium_thin)
     tur.hideturtle()
     move(X, Y)
+    scale = 8
 
     # draw x, y axis and print the record date
-    draw_x_y_axis(total_num * 10)
+    draw_x_y_axis(total_num * scale)
     print_record_date(record_date)
 
     # draw four bar
-    draw_bar(large_thick * 10, "#E51400")
-    draw_bar(large_thin * 10, "#FA6800")
-    draw_bar(medium_thick * 10, "#F0A30A")
-    draw_bar(medium_thin * 10, "#E3C800")
+    draw_bar(large_thick * scale, "#E51400")
+    draw_bar(large_thin * scale, "#FA6800")
+    draw_bar(medium_thick * scale, "#F0A30A")
+    draw_bar(medium_thin * scale, "#E3C800")
 
     # write the total number of pizzas
     write_total_num(total_num)
@@ -114,3 +115,5 @@ def draw_bar_chart(record_date, large_thick, large_thin, medium_thick, medium_th
 def main():
     draw_bar_chart("16/11/2021", 20, 10, 15, 10)
     win.exitonclick()
+
+main()
