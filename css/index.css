@@ -50,6 +50,9 @@ ul{
     display: block;
     margin: 5px;
 }
+.lk:hover{
+    color: rgba(89, 146, 154);
+}
 .noti{
     display: table;
     color: white;
