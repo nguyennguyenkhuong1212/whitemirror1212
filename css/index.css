@@ -8,7 +8,7 @@
 .hd1{
     text-align: center;
     font-size: 40px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Playfair Display SC', serif;    
     height: 1000px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -22,15 +22,15 @@ ul{
     margin: 0px;
 }
 @keyframes color-change{
-    0% {color: red;}
-    25% {color: magenta}
-    50% {color: blue;}
-    75% {color: green;}
-    100% {color: yellow;}
+    0% {color: coral;}
+    25% {color: orange}
+    50% {color: yellow;}
+    75% {color: yellowgreen;}
+    100% {color: green;}
 }
 .nt{
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Libre Baskerville', serif;  
     float: inline;
     font-size: 30px;
     font-weight: bold;
@@ -43,9 +43,9 @@ ul{
 }
 .lk{
     text-align: left;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Prata', serif;
     text-decoration: none;
-    font-size: 3vmax;
+    font-size: 4vmax;
     color: white;
     display: block;
     margin: 5px;
